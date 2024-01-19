@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+           
+     <section class="banner" id="home1">
+    <form class="recipeform"  action="/addblog" method="post" enctype="multipart/form-data">
+        <label for="title">Recipe Name:</label>
+        <input type="text" name="title" placeholder="Enter Name" required>
+         <label for="ingredients">Ingredients:</label>
+         <textarea type="text" name="ingredients" placeholder="Enter Ingredients" rows="4" required></textarea>
+          <label for="steps">Steps:</label>
+        <textarea name="steps" placeholder="Enter Steps" rows="10" required></textarea>
+         <label for="image">Recipe Image:</label>
+        <input type="file" name="image" / required>
+        <button type="submit">Post Recipe</button>
+    </form></section>
+</body>
+</html>

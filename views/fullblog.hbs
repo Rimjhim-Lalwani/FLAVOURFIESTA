@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+ <section class="about" id="about"><div class="container">
+
+<div class="title">
+            <h2>{{blogInstance.title}}</h2>
+        </div>
+        <div class="contentBx">
+            <div class="content">
+                   <p><h2 style="font-weight:200">Ingredients:</h2>{{blogInstance.ingredients}}</p>
+                <br>
+                <p><h2 style="font-weight:200">Steps:</h2>{{blogInstance.steps}}</p>
+                <br>
+                <p><h2 style="font-weight:200">Recipe By:</h2>{{blogInstance.user.username}}</p>
+            </div>
+            <div class="content">
+                <div class="imgbx">
+                    <img src="/{{blogInstance.image}}"  class="cover">
+                </div>
+            </div>
+            
+        </div>
+ 
+
+
+  
+ 
+
+  </div></section>
+
+</body>
+</html>

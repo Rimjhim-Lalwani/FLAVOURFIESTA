@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+      <header>
+         <a href="#" class="logo">FLAVOUR<div class="logo1">fiesta</div> </a>
+
+ <ul class="navigation">
+        <li><a href="/adminhome">Home</a></li>
+        
+         <li><a href="/notification">Notifications</a></li>
+            <li><a href="/adminhome2">My Recipes</a></li>
+             <li><a href="/addblog">Add Recipe</a></li>
+             <li><a href="/">Logout</a></li>
+    </ul>
+    </header>
+    <h2 style="padding-left:150px; padding-top:50px">ALL RECIPES</h2>
+ <section class="about" id="about"><div class="container">
+{{#each blogsadmin as |x|}}
+{{#if x.verify}}
+<div class="title">
+            <h2>{{title}}</h2>
+        </div>
+        <div class="contentBx">
+            <div class="content">
+                <p><h2 style="font-weight:200">Ingredients:</h2>{{ingredients}}</p>
+                <br>
+                {{!-- <p><h2 style="font-weight:200">Steps:</h2>{{steps}}</p>
+                <br> --}}
+                <p><h2 style="font-weight:200">Recipe By:</h2>{{user.username}}</p><form action="/fullblog/{{_id}}" method="POST">
+      <button type="submit">View More</button>
+    </form>
+    <form action="/deleteBlog/{{_id}}" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+            </div>
+            <div class="content">
+                <div class="imgbx">
+                    <img src={{image}}  class="cover">
+                </div>
+            </div>
+            
+        </div>
+ 
+{{/if}}
+{{/each}}
+
+
+  
+ 
+
+  </div></section>
+<footer>
+     <a href="#" class="logo">FLAVOUR<div class="logo1">fiesta</div> </a>
+     <ul class="footerMenu">
+      <li><a href="/adminhome">Home</a></li>
+        
+        <li><a href="/notification">Notifications</a></li>
+            <li><a href="/adminhome2">My Recipes</a></li>
+             <li><a href="/addblog">Add Recipe</a></li>
+             <li><a href="/">Logout</a></li>
+    </ul>
+    <p class="copyrightText"> Copyright © 2023. All Rights Reserved.</p>
+
+</footer>       
+</body>
+</html>
